@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 13px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #121212, #ff0000, #121212, #000000);
+    background-size: 400% 400%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientAnimation 7s ease infinite;
+    position: relative; 
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 20% 50%;
+    }
+    50% {
+        background-position: 20% 50%;
+    }
+    100% {
+        background-position: 20% 50%;
+    }
+}
+
+#xx {
+    display: inline-block;
+    padding: 50px;
+    border: 5px solid #ff0000;
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    animation: glow 3s infinite alternate;
+}
+
+#xx a {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+    font-size: 16px;
+}
+
+#xx a i, 
+#xx a .custom-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+#xx a:hover {
+    background-color: #ff0000;
+    color: black;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px transparent;
+    }
+    25% {
+        box-shadow: 0 -10px 20px #ff0000, -10px 0 40px #ff0000, 10px 10px 60px transparent;
+    }
+    50% {
+        box-shadow: -10px 0 20px #ff0000, 10px 0 40px #ff0000, 0 10px 60px transparent;
+    }
+    75% {
+        box-shadow: 0 10px 20px #ff0000, 10px 0 40px #ff0000, -10px -10px 60px transparent;
+    }
+    100% {
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px transparent;
+    }
+}
+
+#animatedText {
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-top: 123px;
+    animation: textGlow 3s infinite alternate;
+    margin: 0;
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px transparent;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px transparent;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px transparent;
+    }
+}
